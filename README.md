@@ -30,14 +30,17 @@ Our Getting Started Guides are hands-on tutorials that walk you through installi
 
 ## Quick Links
 
-- [NativeScript home page](http://nativescript.org)
-- [NativeScript Code Samples](http://docs.nativescript.org/angular/code-samples/overview)
-- [Install NativeScript Demo mobile app](https://www.nativescript.org/nativescript-example-application)
-- [NativeScript and Angular](http://docs.nativescript.org/angular/tutorial/ng-chapter-0)
+- [NativeScript home page](https://nativescript.org)
+- [NativeScript code samples](https://docs.nativescript.org/angular/code-samples/overview)
+- [Install NativeScript demo mobile app](https://www.nativescript.org/nativescript-example-application)
+- [NativeScript and Angular](https://docs.nativescript.org/angular/tutorial/ng-chapter-0)
 - [@NativeScript on Twitter](http://twitter.com/NativeScript)
 - [NativeScript community Slack channel](http://developer.telerik.com/wp-login.php?action=slack-invitation)
+- [NativeScript community forum](https://discourse.nativescript.org/)
 - [NativeScript on Stack Overflow](http://stackoverflow.com/questions/tagged/nativescript)
-- [NativeScript documentation](http://docs.nativescript.org/)
+- [NativeScript documentation](https://docs.nativescript.org/)
+- [NativeScript marketplace](https://market.nativescript.org/)
+
 
 - [NativeScript blog](http://www.nativescript.org/blog)
 
@@ -72,6 +75,6 @@ We [worked together with the Google Angular team](http://angularjs.blogspot.com/
 
 ## Get Help
 
-Please, use [github issues](https://github.com/NativeScript/NativeScript/issues) strictly for [reporting a bugs](CONTRIBUTING.md#bugs) or [requesting features](CONTRIBUTING.md#features). For general NativeScript questions and support, check out the [NativeScript community forum](https://discourse.nativescript.org/).
+Please, use [github issues](https://github.com/NativeScript/NativeScript/issues) strictly for [reporting a bugs](CONTRIBUTING.md#bugs) or [requesting features](CONTRIBUTING.md#features). For general NativeScript questions and support, check out the [NativeScript community forum](https://discourse.nativescript.org/) or ask our experts in [NativeScript community Slack channel](http://developer.telerik.com/wp-login.php?action=slack-invitation).
 
 ![](https://ga-beacon.appspot.com/UA-111455-24/nativescript/nativescript?pixel) 
