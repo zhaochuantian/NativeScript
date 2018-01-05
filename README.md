@@ -33,6 +33,7 @@ Our Getting Started Guides are hands-on tutorials that walk you through installi
 - [NativeScript home page](https://nativescript.org)
 - [NativeScript code samples](https://docs.nativescript.org/angular/code-samples/overview)
 - [Install NativeScript demo mobile app](https://www.nativescript.org/nativescript-example-application)
+- [NativeScript playground](https://play.nativescript.org)
 - [NativeScript and Angular](https://docs.nativescript.org/angular/tutorial/ng-chapter-0)
 - [@NativeScript on Twitter](http://twitter.com/NativeScript)
 - [NativeScript community Slack channel](http://developer.telerik.com/wp-login.php?action=slack-invitation)
