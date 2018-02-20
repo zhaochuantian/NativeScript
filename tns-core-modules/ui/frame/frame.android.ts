@@ -471,8 +471,8 @@ class AndroidFrame extends Observable implements AndroidFrameDefinition {
         }
     }
 
-    public get activity(): android.app.Activity {
-        let activity: android.app.Activity = this.owner._context;
+    public get activity(): android.support.v7.app.AppCompatActivity {
+        let activity: android.support.v7.app.AppCompatActivity = this.owner._context;
         if (activity) {
             return activity;
         }
@@ -504,7 +504,7 @@ class AndroidFrame extends Observable implements AndroidFrameDefinition {
         return bar;
     }
 
-    public get currentActivity(): android.app.Activity {
+    public get currentActivity(): android.support.v7.app.AppCompatActivity {
         let activity = this.activity;
         if (activity) {
             return activity;
@@ -576,7 +576,7 @@ function findPageForFragment(fragment: android.app.Fragment, frame: Frame) {
     }
 }
 
-function startActivity(activity: android.app.Activity, frameId: number) {
+function startActivity(activity: android.support.v7.app.AppCompatActivity, frameId: number) {
     // TODO: Implicitly, we will open the same activity type as the current one
     const intent = new android.content.Intent(activity, activity.getClass());
     intent.setAction(android.content.Intent.ACTION_DEFAULT);
@@ -766,7 +766,7 @@ class ActivityCallbacksImplementation implements AndroidActivityCallbacks {
     }
 
     @profile
-    public onCreate(activity: android.app.Activity, savedInstanceState: android.os.Bundle, superFunc: Function): void {
+    public onCreate(activity: android.support.v7.app.AppCompatActivity, savedInstanceState: android.os.Bundle, superFunc: Function): void {
         if (traceEnabled()) {
             traceWrite(`Activity.onCreate(${savedInstanceState})`, traceCategories.NativeLifecycle);
         }
@@ -793,7 +793,7 @@ class ActivityCallbacksImplementation implements AndroidActivityCallbacks {
     }
 
     @profile
-    public onSaveInstanceState(activity: android.app.Activity, outState: android.os.Bundle, superFunc: Function): void {
+    public onSaveInstanceState(activity: android.support.v7.app.AppCompatActivity, outState: android.os.Bundle, superFunc: Function): void {
         superFunc.call(activity, outState);
         const rootView = this._rootView;
         if (rootView instanceof Frame) {
@@ -934,7 +934,7 @@ class ActivityCallbacksImplementation implements AndroidActivityCallbacks {
         });
     }
 
-    public resetActivityContent(activity: android.app.Activity): void {
+    public resetActivityContent(activity: android.support.v7.app.AppCompatActivity): void {
         // Delete previously cached root view in order to recreate it.
         this._rootView = null;
         this.setActivityContent(activity, null, false);
@@ -947,7 +947,7 @@ class ActivityCallbacksImplementation implements AndroidActivityCallbacks {
     // 3. Livesync if rootView has no custom _onLivesync. this._rootView should have been cleared upfront. Launch event should not fired
     // 4. _resetRootView method. this._rootView should have been cleared upfront. Launch event should not fired
     private setActivityContent(
-        activity: android.app.Activity,
+        activity: android.support.v7.app.AppCompatActivity,
         savedInstanceState: android.os.Bundle,
         fireLaunchEvent: boolean
     ): void {
@@ -1030,7 +1030,7 @@ const notifyLaunch = profile("notifyLaunch", function notifyLaunch(intent: andro
     return launchArgs.root;
 });
 
-export function setActivityCallbacks(activity: android.app.Activity): void {
+export function setActivityCallbacks(activity: android.support.v7.app.AppCompatActivity): void {
     activity[CALLBACKS] = new ActivityCallbacksImplementation();
 }
 

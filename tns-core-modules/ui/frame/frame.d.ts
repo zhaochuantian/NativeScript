@@ -350,12 +350,12 @@ export interface AndroidFrame extends Observable {
     /**
      * Gets the native [android Activity](http://developer.android.com/reference/android/app/Activity.html) instance associated with this Frame. In case of nested Frame objects, this property points to the activity of the root Frame.
      */
-    activity: any /* android.app.Activity */;
+    activity: any /* android.support.v7.app.AppCompatActivity */;
 
     /**
      * Gets the current (foreground) activity for the application. This property will recursively traverse all existing Frame objects and check for own Activity property.
      */
-    currentActivity: any /* android.app.Activity */;
+    currentActivity: any /* android.support.v7.app.AppCompatActivity */;
 
     /**
      * Gets the actionBar property of the currentActivity.
@@ -432,7 +432,7 @@ export interface iOSFrame {
     //@endprivate
 }
 
-export function setActivityCallbacks(activity: any /*android.app.Activity*/): void;
+export function setActivityCallbacks(activity: any /*android.support.v7.app.AppCompatActivity*/): void;
 //@private
 /**
  * @private

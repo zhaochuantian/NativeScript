@@ -252,7 +252,7 @@ export class View extends ViewCommon {
             }
 
             if (!manager && this._context) {
-                manager = (<android.app.Activity>this._context).getFragmentManager();
+                manager = (<android.support.v7.app.AppCompatActivity>this._context).getSupportFragmentManager();
             }
 
             this._manager = manager;
